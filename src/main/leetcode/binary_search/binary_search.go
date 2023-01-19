@@ -1,6 +1,7 @@
 package binary_search
 
-// BinarySearch 二分查找
+// BinarySearch 704.二分查找
+// https://leetcode.cn/problems/binary-search/
 // @params:
 // nums: 升序数组,且无重复数字
 // target: 所要查找的元素
