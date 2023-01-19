@@ -17,3 +17,18 @@ func CreateFull(val int, leftNode *BitTreeNode, rightNode *BitTreeNode) *BitTree
 func CreateClone(source *BitTreeNode) *BitTreeNode {
 	return &BitTreeNode{source.Val, source.Left, source.Right}
 }
+
+func (root *BitTreeNode) InorderGenerate() []int {
+	nums := []int{}
+	var inorder func(node *BitTreeNode)
+	inorder = func(node *BitTreeNode) {
+		if node == nil {
+			return
+		}
+		inorder(node.Left)
+		nums = append(nums, node.Val)
+		inorder(node.Right)
+	}
+	inorder(root)
+	return nums
+}
